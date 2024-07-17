@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crm</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="custom-select.css">
+    <script defer src="custom-select.min.js" type="text/javascript"></script>
+    <script defer src="./main.js"></script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="header__logo">
+                <a href="" class="header__logo-link">
+                    skb.
+                </a>
+            </div>
+            
+            <input type="text" class="header__search" id="headerSearch" placeholder="Введите запрос">
+        </div>
+    </header>
+    <main>
+        <section class="main-section">
+            <div class="container main-container">
+                <h1 class="main__header">Клиенты</h1>
+                <div class="main__table-wrapper">
+                    <table class="main__table" border="0" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th class="sort-row sorting start-row_id" id="sortable">ID <button id="sortById" class="sort-button-up"></button></th>
+                                <th class="sort-row" id="sortable">Фамилия Имя Отчество <button id="sortByName"></button></th>
+                                <th class="sort-row" id="sortable">Дата и время создания <button id="sortByCreatedTime"></button></th>
+                                <th class="sort-row" id="sortable">Последние изменения <button id="sortByEditedTime"></button></th>
+                                <th class="sort-row">Контакты</th>
+                                <th class="sort-row">Действия</th>
+    
+                            </tr>
+                        </thead>
+                        <tbody class="table-body">
+                            
+                        </tbody>
+                    </table>
+                    <form id="form" class="modal-form" action="">
+                        <div class="modal-content">
+                            <div class="form-headers-wrap">
+                                <h1 class="add-data-headers">Новый клиент</h1>
+                                <span class="close">&times;</span>
+                            </div>
+                            <input class="full-name-edit" type="text" id="surname" required placeholder="Фамилия*">
+                            <input class="full-name-edit" type="text" id="name" required placeholder="Имя*">
+                            <input class="full-name-edit" type="text" id="lastName" placeholder="Отчество*">
+                            <button class="add-social-button" id="addSocial" type="button">Добавить контакт</button>
+                            <button class="save-info" id="addPersonInfo" type="submit">Сохранить</button>
+                        </div>
+                        
+                    </form>
+                    <form id="changeForm" class="modal-form" action="">
+                        <div class="modal-content modal-change">
+                            <div class="form-headers-wrap change-form-wrap">
+                                <h1 class="change-data-headers">Изменить данные</h1>
+                                <h3 class="edit-id">dsds</h3>
+                                <span class="close close-change">&times;</span>
+                            </div>
+                            <input class="full-name-edit" type="text" id="changeSurname" placeholder="Фамилия">
+                            <input class="full-name-edit" type="text" id="changeName" placeholder="Имя">
+                            <input class="full-name-edit" type="text" id="changeLastName" placeholder="Отчество">
+                            <button class="add-social-button" id="changeSocial" type="button">Добавить контакт</button>
+                            <button class="save-info" id="addPersonInfo" type="submit">Сохранить</button>
+                        </div>
+                        
+                    </form>
+                    <button id="addPerson" class="main__add-person-button"><img src="./assets/img/person.svg" width="22" height="16" alt="" style="margin-right: 10px;">Добавить человека</button>
+                </div>
+                
+               
+            </div>
+        </section>
+    </main>
+</body>
+</html>
